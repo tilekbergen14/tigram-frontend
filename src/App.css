@@ -1,38 +1,283 @@
-.App {
-  text-align: center;
+/******** landing *********/
+.landing {
+  min-height: 600px;
+  height: 100vh;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+header {
+  display: flex;
+  justify-content: space-between;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.icon {
+  cursor: pointer;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.section {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+.logo-section {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
-
-.App-link {
-  color: #61dafb;
+.logo {
+  font-size: 10vw;
+  background: linear-gradient(to right, var(--blue), var(--green));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.button-container {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+.button {
+  width: 49%;
+  border: none;
+  padding: 10px;
+  border-radius: 10px;
+  font-weight: 600;
+  color: var(--white);
+}
+.blue {
+  background-color: var(--blue);
+}
+.green {
+  background-color: var(--green);
+}
+footer {
+  width: max-content;
+}
+.text500 {
+  font-weight: 500;
+  margin-bottom: 8px;
+}
+.text {
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+}
+.icons-box {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+@media screen and (max-width: 1000px) {
+  .button-container {
+    display: flex;
+    flex-direction: column;
   }
-  to {
-    transform: rotate(360deg);
+  .button {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+}
+/******** help ********/
+.help-box {
+  margin-top: 5px;
+  background-color: var(--light-grey);
+  border-radius: 10px;
+  width: 200px;
+  padding: 10px;
+  font-size: 14px;
+  text-align: center;
+  position: absolute;
+  top: 20px;
+}
+.help {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  position: relative;
+}
+
+/********** home **********/
+.home {
+  position: relative;
+}
+.fixed-navbar {
+  display: flex;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  width: 100%;
+  z-index: 3;
+  background-color: white;
+  padding: 10px 0;
+}
+.sm-logo {
+  font-size: 24px;
+  font-weight: 800;
+  background: linear-gradient(to right, var(--blue), var(--green));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.account-corner {
+  display: flex;
+  align-items: center;
+}
+.username {
+  padding-left: 10px;
+  font-weight: 500;
+}
+main {
+  display: flex;
+  padding: 20px 20px 0 20px;
+  background-color: var(--light-grey);
+}
+.left-box {
+  width: 250px;
+  margin-right: 20px;
+  position: relative;
+}
+.users {
+  position: sticky;
+  top: 80px;
+  background-color: var(--white);
+  width: 100%;
+  max-height: 400px;
+  overflow-y: scroll;
+}
+.users::-webkit-scrollbar {
+  width: 1px;
+  background-color: var(--light-grey);
+}
+.post-section {
+  flex: 1;
+}
+.posts {
+  background-color: var(--white);
+  min-height: 600px;
+  width: 100%;
+}
+.feed-title {
+  margin: 16px;
+}
+.post-image {
+  width: 100%;
+}
+.bg-white {
+  background-color: var(--white);
+}
+.user-profile {
+  width: 250px;
+  margin-left: 20px;
+}
+.user-box {
+  position: sticky;
+  top: 80px;
+  background-color: var(--white);
+  max-height: 600px;
+}
+.mt-10 {
+  margin-top: 10px;
+}
+/******* post ******/
+.post {
+  width: 100%;
+  border-bottom: 1px solid grey;
+  margin-bottom: 20px;
+}
+.image {
+  width: 100%;
+}
+.post-info {
+  display: flex;
+  margin: 8px;
+}
+.inline-info {
+  flex: 1;
+  margin-left: 8px;
+}
+.post-publisher {
+  color: var(--blue);
+  font-weight: 500;
+  font-size: 16px;
+}
+.date {
+  font-size: 12px;
+  color: grey;
+}
+.post-title {
+  margin-top: 10px;
+  font-size: 2vw;
+}
+.likes {
+  margin-top: 10px;
+  display: flex;
+}
+.like-text {
+  padding-left: 10px;
+  color: grey;
+  font-size: 14px;
+}
+.user-component2 {
+  display: none;
+}
+.drawer {
+  display: none;
+}
+.mobile-search {
+  width: 200px;
+}
+.mobile-logo {
+  display: none;
+}
+.nav {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+@media screen and (max-width: 1100px) {
+  .user-component {
+    display: none;
+  }
+  .drawer {
+    display: flex;
+    align-items: center;
+    width: max-content;
+  }
+  .user-component2 {
+    display: flex;
+  }
+  .user-profile {
+    margin-left: 0;
+    margin-bottom: 10px;
+  }
+}
+@media screen and (max-width: 1100px) {
+  .user-component2 {
+    display: none;
+  }
+  .friends-component {
+    display: none;
+  }
+  .sm-logo {
+    display: none;
+  }
+  .fixed-navbar {
+    flex-direction: column;
+    padding-top: 0;
+  }
+  .search-input {
+    width: max-content;
+  }
+  .mobile-logo {
+    display: flex;
+    justify-content: center;
+    position: sticky;
+  }
+  main {
+    padding: 0;
+    background-color: var(--white);
+  }
+  .post-title {
+    font-size: calc(2vw + 5px);
   }
 }
