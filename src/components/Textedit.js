@@ -6,7 +6,7 @@ import InputAdornment from "@material-ui/core/InputAdornment";
 export default function Textedit() {
   return (
     <TextField
-      placeholder="Enter key words..."
+      placeholder="Enter keywords..."
       variant="outlined"
       size="small"
       InputProps={{

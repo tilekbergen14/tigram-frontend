@@ -17,7 +17,7 @@ export default function Friends() {
               <Avatar alt="profile" className="cursorp" />
             </ListItemIcon>
             <ListItemText>
-              <p className="cursorp text">Tilekbergen Mukhamet</p>
+              <p className="cursorp text">Tilekbergen</p>
             </ListItemText>
           </ListItem>
         </List>

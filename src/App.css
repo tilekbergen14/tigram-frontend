@@ -38,7 +38,7 @@ header {
   justify-content: space-between;
 }
 .button {
-  width: 49%;
+  width: 95%;
   border: none;
   padding: 10px;
   border-radius: 10px;
@@ -129,18 +129,18 @@ footer {
 main {
   display: flex;
   padding: 20px 20px 0 20px;
+  position: relative;
   background-color: var(--light-grey);
 }
 .left-box {
   width: 250px;
-  margin-right: 20px;
+  margin-right: 16px;
   position: relative;
 }
 .users {
-  position: sticky;
-  top: 80px;
+  position: fixed;
+  width: 250px;
   background-color: var(--white);
-  width: 100%;
   max-height: 400px;
   overflow-y: scroll;
 }
@@ -168,12 +168,13 @@ main {
 .user-profile {
   width: 250px;
   margin-left: 20px;
+  position: relative;
 }
 .user-box {
-  position: sticky;
-  top: 80px;
+  position: fixed;
   background-color: var(--white);
   max-height: 600px;
+  width: 250px;
 }
 .mt-10 {
   margin-top: 10px;
@@ -181,7 +182,7 @@ main {
 /******* post ******/
 .post {
   width: 100%;
-  border-bottom: 1px solid grey;
+  border-bottom: 3px solid var(--light-grey);
   margin-bottom: 20px;
 }
 .image {
@@ -234,6 +235,9 @@ main {
   width: 100%;
   justify-content: space-between;
 }
+.friends-component {
+  position: sticky;
+}
 @media screen and (max-width: 1100px) {
   .user-component {
     display: none;
@@ -250,8 +254,11 @@ main {
     margin-left: 0;
     margin-bottom: 10px;
   }
+  .left-box {
+    top: 270px;
+  }
 }
-@media screen and (max-width: 1100px) {
+@media screen and (max-width: 768px) {
   .user-component2 {
     display: none;
   }
@@ -280,4 +287,78 @@ main {
   .post-title {
     font-size: calc(2vw + 5px);
   }
+}
+/******** profile ***********/
+.banner-img {
+  width: 100%;
+  aspect-ratio: 16/6;
+  object-fit: cover;
+}
+.user-thumb {
+  position: relative;
+}
+.avatar {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.profile-name {
+  text-align: center;
+  margin: 20px;
+  font-size: 18px;
+  font-weight: 900;
+}
+.profile-nav {
+  justify-content: space-between;
+  display: flex;
+  align-items: center;
+  background-color: var(--light-grey);
+  padding: 8px 20px;
+  margin: 20px 0;
+}
+.m-0 {
+  margin: 0;
+}
+.w-100 {
+  width: 100%;
+}
+Button {
+  outline: none;
+  cursor: pointer;
+}
+/******** auth page ********/
+.auth-page {
+  height: 100vh;
+  min-height: 600px;
+  display: flex;
+}
+.auth-image {
+  height: 100%;
+  width: 50%;
+}
+.auth-side {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.white {
+  color: white !important;
+}
+/************ create post*************/
+.create-post {
+  position: fixed;
+  z-index: 4;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+}
+.my-10 {
+  margin: 10px 0 !important;
+}
+.dialog {
+  padding: 0 20px 20px 20px;
+  display: flex;
+  flex-direction: column;
 }

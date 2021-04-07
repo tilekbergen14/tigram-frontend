@@ -4,6 +4,7 @@ import InstagramIcon from "@material-ui/icons/Instagram";
 import WhatsAppIcon from "@material-ui/icons/WhatsApp";
 import Drawer from "../components/Drawer";
 import Help from "../components/Help";
+import { Link } from "react-router-dom";
 
 export default function Landing() {
   return (
@@ -16,8 +17,12 @@ export default function Landing() {
         <div className="logo-section">
           <h1 className="logo">Tigram</h1>
           <div className="button-container">
-            <button className="button blue">Testing without sign up</button>
-            <button className="button green">Sign up</button>
+            <Link to="/auth" className="w-100">
+              <button className="button blue">Testing without sign up</button>
+            </Link>
+            <Link to="/auth" className="w-100">
+              <button className="button green">Sign up</button>
+            </Link>
           </div>
         </div>
       </div>
